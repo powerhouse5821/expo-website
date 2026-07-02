@@ -19,28 +19,42 @@
 
         .card {
             background-color: white;
-            padding: 50px 80px;
+            
+            /* Responsive Square Rules */
+            width: 90%; /* Shrinks on small phones */
+            max-width: 400px; /* Stops growing on computer screens */
+            aspect-ratio: 1 / 1; /* Keeps it perfectly square no matter the size */
+            
+            box-sizing: border-box;
+            padding: 20px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             text-align: center;
+            
+            /* Centers everything vertically and horizontally */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
             animation: bounceIn 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         }
 
         h1 {
             color: #ff4757;
-            font-size: 3.5rem;
-            margin: 0 0 15px 0;
+            font-size: 2.2rem; /* Scaled down slightly so it doesn't wrap awkwardly on phones */
+            margin: 0 0 10px 0;
         }
 
         p {
             color: #2f3542;
-            font-size: 1.2rem;
+            font-size: 1.1rem; 
             margin: 0;
         }
 
         .emoji {
-            font-size: 4rem;
-            margin-bottom: 20px;
+            font-size: 3.5rem;
+            margin-bottom: 15px;
         }
 
         /* Fun bounce animation when the page loads */
